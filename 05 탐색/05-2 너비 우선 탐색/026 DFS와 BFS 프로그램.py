@@ -2,10 +2,6 @@ import sys
 from collections import deque
 input = sys.stdin.readline
 
-n, m, v = map(int, input().split())
-a = [[] for _ in range(n+1)] # 인접 리스트
-visited = [False] * (n+1) # 방문 리스트
-
 def DFS(v):
     print(v, end = ' ')
     visited[v] = True
@@ -29,6 +25,10 @@ def BFS(v):
                 q.append(i)
                 print(i, end = ' ')
                 visited[i] = True
+
+n, m, v = map(int, input().split())
+a = [[] for _ in range(n+1)] # 인접 리스트
+visited = [False] * (n+1) # 방문 리스트
             
 for i in range(m):
     s, e = map(int, input().split())
