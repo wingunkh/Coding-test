@@ -7,7 +7,7 @@ for i in range(n):
 
 for i in range(n-1, -1, -1):
     if a[i] <= k:
-        count += int(k / a[i])
+        count += k // a[i]
     k = k % a[i]
 
 print(count)
