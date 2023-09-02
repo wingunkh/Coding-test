@@ -11,18 +11,18 @@ next = 1
 for i in range(n):
     target = a[i]
 
-    if target >= next:
-        while target >= next:
+    if next <= target:
+        while next <= target:
             stack.append(next)
             next += 1
-            answer.append("+")
+            answer.append('+')
         stack.pop()
-        answer.append("-")
+        answer.append('-')
     else:
         if stack.pop() == target:
-            answer.append("-")
+            answer.append('-')
         else:
-            print("NO")
+            print('NO')
             break
 else:
     print(*answer, sep = '\n')
