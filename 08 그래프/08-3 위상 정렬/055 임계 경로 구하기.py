@@ -28,6 +28,8 @@ while q:
         if indegree[next[0]] == 0:
             q.append(next[0])
 
+print(result[end])
+
 count = 0
 visited = [False] * (n+1)
 q.append(end)
@@ -42,5 +44,4 @@ while q:
                 visited[next[0]] = True
                 q.append(next[0])
 
-print(result[end])
 print(count)
