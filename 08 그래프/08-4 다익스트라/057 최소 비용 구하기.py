@@ -9,14 +9,14 @@ distance = [sys.maxsize for _ in range(n+1)]
 visited = [False for _ in range(n+1)]
 q = PriorityQueue()
 
-for i in range(m):
+for _ in range(m):
     s, e, w = map(int, input().split())
     a[s].append((e, w))
 
 start, end = map(int, input().split())
 
-q.put((0, start))
 distance[start] = 0
+q.put((0, start))
 
 while q.qsize() > 0:
     _, now = q.get()
