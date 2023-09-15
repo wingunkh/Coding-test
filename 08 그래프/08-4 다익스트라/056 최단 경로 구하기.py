@@ -13,8 +13,8 @@ for _ in range(E):
     u, v, w = map(int, input().split())
     a[u].append((v, w))
 
-q.put((0, k)) # 우선순위 큐에 해당 노드까지의 거리와 노드의 번호 저장
 distance[k] = 0
+q.put((0, k)) # 우선순위 큐에 해당 노드까지의 거리와 노드의 번호 저장
 
 while q.qsize() > 0:
     _, now = q.get()
