@@ -29,7 +29,7 @@ for i in range(e):
     
 while count < v-1:
     w, a, b = edges.get()
-    if find(a) != find(b):
+    if find(a) != find(b): # 사이클 존재 여부 판별
         union(a, b)
         result += w
         count += 1
