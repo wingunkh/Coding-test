@@ -20,18 +20,16 @@ def union(a, b):
 v, e = map(int, input().split())
 edges = PriorityQueue()
 parent = [i for i in range(v+1)]
-count = 0
 result = 0
 
 for i in range(e):
     a, b, w = map(int, input().split())
     edges.put((w, a, b))
     
-while count < v-1:
+while edges.qsize() > 0:
     w, a, b = edges.get()
     if find(a) != find(b): # 사이클 존재 여부 판별
         union(a, b)
         result += w
-        count += 1
 
 print(result)
