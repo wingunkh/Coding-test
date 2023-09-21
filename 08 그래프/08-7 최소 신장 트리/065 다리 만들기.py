@@ -79,10 +79,10 @@ while edges.qsize() > 0:
     w, a, b = edges.get()
     if find(a) != find(b):
         union(a, b)
-        result += w
         count += 1
+        result += w
 
-if count == mark - 2:
+if count == mark-2:
     print(result)
 else:
     print(-1)
