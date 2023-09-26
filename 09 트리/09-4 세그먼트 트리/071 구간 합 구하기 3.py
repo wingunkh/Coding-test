@@ -47,8 +47,8 @@ while tmp != 1:
 for _ in range(m + k):
     question, s, e = map(int, input().split())
     if question == 1:
-        changeVal(s - 1 + startIdx, e)
+        changeVal(s + startIdx - 1, e)
     else:
-        s = s - 1 + startIdx
-        e = e - 1 + startIdx
+        s = s + startIdx - 1
+        e = e + startIdx - 1
         print(getSum(s, e))
