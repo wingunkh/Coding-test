@@ -34,8 +34,8 @@ def LCA(a, b):
         
 n = int(input())
 tree = [[] for _ in range(n+1)]
-parent = [0 for _ in range(n+1)]
-depth = [1 for _ in range(n+1)]
+parent = [0 for _ in range(n+1)] # 각 노드의 부모 노드를 저장하는 리스트
+depth = [1 for _ in range(n+1)] # 각 노드의 깊이를 저장하는 리스트
 visited = [False for _ in range(n+1)]
 
 for _ in range(n-1):
