@@ -2,8 +2,8 @@ n, k = map(int, input().split())
 d = [[0 for _ in range(n+1)] for _ in range(n+1)]
 
 for i in range(n+1):
-    d[i][1] = i
     d[i][0] = 1
+    d[i][1] = i
     d[i][i] = 1
 
 for i in range(n+1):
